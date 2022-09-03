@@ -6,10 +6,6 @@ public abstract class Pessoa {
     protected int idade;
     protected String sexo;
 
-    public void fazerAniversario() {
-        this.idade++;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -36,10 +32,16 @@ public abstract class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
-                ", sexo='" + sexo + '\'' +
+        return "Pessoa {" +
+                "\nNome: '" + nome + '\'' +
+                "\nIdade: " + idade +
+                "\nSexo: '" + sexo + '\'' +
                 '}';
     }
+
+    public void fazerAniversario() {
+        this.idade++;
+        System.out.println("Fez aniversário de " + this.idade + " anos.");
+    }
+
 }
